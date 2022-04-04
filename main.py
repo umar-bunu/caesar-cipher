@@ -6,7 +6,7 @@ def encrypt(sentence, letters, letterCount, shiftCount):
         else:
             result+=letters[((letters.index(x.lower())+shiftCount) % letterCount)]
     result = result.upper()
-    print("\nSentence: "+sentence+"... Encrypted to -> "+result)
+    print("\nText: "+sentence+"... Encrypted to -> "+result)
     return result
 
 def decrypt(sentence, letters, letterCount, shiftCount):
@@ -17,7 +17,7 @@ def decrypt(sentence, letters, letterCount, shiftCount):
         else:
             result+=letters[((letters.index(x.lower())-shiftCount) % letterCount)]
     result = result.lower();
-    print("\nSentence: "+sentence+"... Decrypted to -> "+result)
+    print("\nText: "+sentence+"... Decrypted to -> "+result)
     return result;
 
 
@@ -38,3 +38,4 @@ for line in wholetxt:
         encrypt(txt, selectedLetters, letterCount, shiftCount)
     elif opr =="1":
         decrypt(txt, selectedLetters, letterCount, shiftCount)
+print("");
